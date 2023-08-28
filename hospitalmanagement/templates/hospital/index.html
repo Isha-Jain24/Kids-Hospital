@@ -1,0 +1,845 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="call-button">
+  <a href="https://api.whatsapp.com/send?phone=7726831689&text=Hello%20Sir.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" style="color: #fff;background: rgb(37, 211, 102);padding: 10px 15px;border-radius: 8px;
+    position: fixed;bottom: 80px;right: 15px;font-size: 20px;z-index:10000;box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<section class="vs-hero-wrapper position-relative  ">
+  <div class="vs-hero-carousel" data-navprevnext="true" data-height="800" data-container="1900"
+    data-slidertype="responsive">
+    <div class="ls-slide" data-ls="duration: 13000; transition2d: 5;">
+      <img src="static/img/hero/h-bg-3-1.jpg" alt="Hero Image" class="ls-bg">
+      <h1 class="text-title ls-l ls-responsive" data-ls-mobile="left: 100px; top: 120px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 80px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 120px; font-size: 82px;"
+        style="left: 335px; top: 120px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 600; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Brightening Smiles,<br> Healing Hearts</h1>
+      <h1 class="text-white ls-l ls-responsive" data-ls-mobile="left: 100px;  top: 285px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 210px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 230px; font-size: 82px;"
+        style="left: 335px; top: 290px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Where Kids' <br> Health Shines</h1>
+      <p class="ls-l text-white ls-responsive ls-hide-sm" data-ls-mobile="left: 100px; "
+        data-ls-tablet=" left: 100px; top: 360px; font-size: 34px; width: 1000px; line-height: 52px;"
+        data-ls-laptop="left: 100px; top: 380px; font-size: 26px; width: 800px; line-height: 48px;"
+        style="left: 335px; top: 480px; width: 605px; font-size: 16px; font-weight: 400; white-space: normal; letter-spacing: 0.02em; line-height: 28px;"
+        data-ls="delayin: 800; texttransitionin: true; textstartatin: transitioninstart; texttypein: lines_asc; textshiftin: 100; textoffsetyin: 100; textdurationin: 2000; offsetyout: 100; durationout: 2000; ">
+        Nurture young lives with playful care. Our specialized pediatric experts ensure joyful recovery through
+        innovative treatments, comfy spaces, and boundless support.</p>
+      <div class="ls-btn ls-l ls-responsive" data-ls-mobile="left: 100px; " data-ls-tablet="left: 100px; top: 580px;"
+        data-ls-laptop="left: 100px; top: 580px;" style="left: 335px; top: 580px;"
+        data-ls="offsetyin: 200; durationin: 2000; delayin: 1400; offsetyout: 300; durationout: 2000; offsetyout: 100; durationout: 2000; ">
+        <a href="/patientlogin" class="vs-btn style3 hover-white">Make Appointment<i class="fas fa-bolt"></i></a>
+      </div>
+    </div>
+    <div class="ls-slide" data-ls="duration: 13000; transition2d: 5;">
+      <img src="static/img/hero/h-bg-3-2.jpg" alt="Hero Image" class="ls-bg">
+      <h1 class="text-title ls-l ls-responsive" data-ls-mobile="left: 100px; top: 120px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 80px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 120px; font-size: 82px;"
+        style="left: 335px; top: 120px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 600; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Adventures in Healing</h1>
+      <h1 class="text-white ls-l ls-responsive" data-ls-mobile="left: 100px;  top: 285px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 210px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 230px; font-size: 82px;"
+        style="left: 335px; top: 200px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Where Kids Embrace <br> Happy Health</h1>
+      <p class="ls-l text-white ls-responsive ls-hide-sm" data-ls-mobile="left: 100px; "
+        data-ls-tablet=" left: 100px; top: 360px; font-size: 34px; width: 1000px; line-height: 52px;"
+        data-ls-laptop="left: 100px; top: 380px; font-size: 26px; width: 800px; line-height: 48px;"
+        style="left: 335px; top: 400px; width: 605px; font-size: 16px; font-weight: 400; white-space: normal; letter-spacing: 0.02em; line-height: 28px;"
+        data-ls="delayin: 800; texttransitionin: true; textstartatin: transitioninstart; texttypein: lines_asc; textshiftin: 100; textoffsetyin: 100; textdurationin: 2000; offsetyout: 100; durationout: 2000; ">
+        Step into a world of wonder where medical magic meets laughter. Our kid-centered hospital offers gentle
+        treatments, colorful spaces, and a world of smiles. </p>
+      <div class="ls-btn ls-l ls-responsive" data-ls-mobile="left: 100px; " data-ls-tablet="left: 100px; top: 580px;"
+        data-ls-laptop="left: 100px; top: 580px;" style="left: 335px; top: 518px;"
+        data-ls="offsetyin: 200; durationin: 2000; delayin: 1400; offsetyout: 300; durationout: 2000; offsetyout: 100; durationout: 2000; ">
+        <a href="/patientlogin" class="vs-btn style3 hover-white">Make Appointment<i class="fas fa-bolt"></i></a>
+      </div>
+    </div>
+    <div class="ls-slide" data-ls="duration: 13000; transition2d: 5;">
+      <img src="static/img/hero/h-bg-3-3.jpg" alt="Hero Image" class="ls-bg">
+      <h1 class="text-title ls-l ls-responsive" data-ls-mobile="left: 100px; top: 120px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 80px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 120px; font-size: 82px;"
+        style="left: 335px; top: 120px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 600; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Where Courage <br> Meets Care</h1>
+      <h1 class="text-white ls-l ls-responsive" data-ls-mobile="left: 100px;  top: 285px; font-size: 120px;"
+        data-ls-tablet="left: 100px; top: 210px; font-size: 92px;"
+        data-ls-laptop="left: 100px; top: 230px; font-size: 82px;"
+        style="left: 335px; top: 290px; font-size: 72px; font-weight: 700;"
+        data-ls="delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; textdurationin: 2000; texttypein: words_asc; textshiftin: 200; textoffsetyin: -100; offsetyout: -100; durationout: 2000; ">
+        Champions of Kids' <br> Wellbeing</h1>
+      <p class="ls-l text-white ls-responsive ls-hide-sm" data-ls-mobile="left: 100px; "
+        data-ls-tablet=" left: 100px; top: 360px; font-size: 34px; width: 1000px; line-height: 52px;"
+        data-ls-laptop="left: 100px; top: 380px; font-size: 26px; width: 800px; line-height: 48px;"
+        style="left: 335px; top: 480px; width: 605px; font-size: 16px; font-weight: 400; white-space: normal; letter-spacing: 0.02em; line-height: 28px;"
+        data-ls="delayin: 800; texttransitionin: true; textstartatin: transitioninstart; texttypein: lines_asc; textshiftin: 100; textoffsetyin: 100; textdurationin: 2000; offsetyout: 100; durationout: 2000; ">
+        A haven for young heroes! Our dedicated team provides superhero-level care, combining medical expertise with
+        compassion in a whimsical, safe environment for speedy recoveries. </p>
+      <div class="ls-btn ls-l ls-responsive" data-ls-mobile="left: 100px; " data-ls-tablet="left: 100px; top: 580px;"
+        data-ls-laptop="left: 100px; top: 580px;" style="left: 335px; top: 580px;"
+        data-ls="offsetyin: 200; durationin: 2000; delayin: 1400; offsetyout: 300; durationout: 2000; offsetyout: 100; durationout: 2000; ">
+        <a href="/patientlogin" class="vs-btn style3 hover-white">Make Appointment<i class="fas fa-bolt"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="vs-service-wrapper space-top space-md-bottom">
+  <div class="container">
+    <div class="row  text-center justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="section-title">
+          <span class="h3 text-theme sec-subtitle">Our Speciality </span>
+          <h2 class="h1">Advance Tools & Treatment Processes </h2>
+          <p>Experience cutting-edge medical care with effective and innovative treatments for your kid's health needs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row vs-carousel wow fadeIn" data-wow-delay="0.3s" data-slide-show="3">
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-1.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-computer-mouse"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Neonatology</a></h3>
+            <p class="fs-xs">Specialize in premature births, neonatal diseases, and developmental support for newborns
+            </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-2.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-blood-pressure"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric ICU </a></h3>
+            <p class="fs-xs">Advanced critical care unit for children's needs, ensuring optimal recovery from serious
+              illness </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-3.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-stethoscope-1"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Dentistry </a>
+            </h3>
+            <p class="fs-xs">Specialized kid's oral healthcare, promoting healthy smiles & a positive approach to dental
+              hygiene </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-4.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-quality-of-life"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Clinical Genetics </a>
+            </h3>
+            <p class="fs-xs">Comprehensive genetic evaluations to identify and manage inherited conditions for better
+              solutions </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-1.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-computer-mouse"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Surgery </a></h3>
+            <p class="fs-xs">Safe and effective treatment of various medical conditions with skilled surgical
+              interventions for kids
+            </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-2.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-blood-pressure"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Neurology </a></h3>
+            <p class="fs-xs">Offer accurate diagnosis & tailored treatment plans for young patients with neurological
+              disorders </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-3.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-stethoscope-1"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Pulmonology </a>
+            </h3>
+            <p class="fs-xs">Specialized respiratory care, addressing conditions like asthma, cystic fibrosis, and lung
+              disorders </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-4.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-quality-of-life"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Ophthalmology </a>
+            </h3>
+            <p class="fs-xs">Expert eye care, from routine exams to complex surgeries, ensures optimal vision and eye
+              health </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-1.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-computer-mouse"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Orthopedic </a></h3>
+            <p class="fs-xs">Expert musculoskeletal care, treating bone, joint, & muscle conditions with precision and
+              expertise
+            </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-2.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-blood-pressure"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Endocrinology </a></h3>
+            <p class="fs-xs">Focused management of hormonal disorders in children, promoting balanced growth &
+              development </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-3.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-stethoscope-1"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Pediatric Cardiology </a>
+            </h3>
+            <p class="fs-xs">Diagnosing and treating congenital and acquired heart conditions with compassion and
+              expertise. </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-25">
+        <div class="service-box ">
+          <div class="sr-img">
+            <img src="static/img/service/sr-2-4.jpg" alt="Service Image" class="w-100">
+          </div>
+          <div class="sr-icon">
+            <i class="flaticon-quality-of-life"></i>
+          </div>
+          <div class="sr-content">
+            <h3 class="h4"><a class="text-reset" href="#">Radiology </a>
+            </h3>
+            <p class="fs-xs">Advanced imaging services cater to pediatric needs, aiding accurate diagnosis and informed
+              medical decisions. </p>
+          </div>
+          <a href="#" class="icon-btn style4"><i class="far fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="vs-about-wrapper space">
+  <div class="parallax" data-parallax-image="static/img/bg/bg-7.jpg"></div>
+  <div class="container">
+    <div class="row flex-row-reverse">
+      <div class="col-lg-6 mb-40 mb-lg-0">
+        <div class="vs-surface wow" data-wow-delay="0.3s">
+          <div class="about-img3 position-relative">
+            <img src="static/img/about/about-1.jpg" alt="About Image" class="w-100">
+            <div class="exp-box-bottom bg-white">
+              <div class="exp-year text-theme">
+                <span class="counter">10</span>+
+              </div>
+              <p class="exp-text text-title mb-0">Years of Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <div class="about-content mb-2 ">
+          <span class="sec-subtitle text-theme h3 mb-2 mb-sm-0">Nurturing Young Lives </span>
+          <div class="row">
+            <div class="col-xl-12">
+              <h2 class="h1 mb-3">Care and Compassion at <span class="text-theme">Agarwal Kids Hospital</span>
+              </h2>
+            </div>
+            <div class="col-xl-10">
+              <p class="mb-4">At Agarwal Kids Hospital, every aspect of your child's journey is woven with extra care.
+                From our playful and comforting environment to specialized pediatric expertise, we ensure their good
+                health comes first. Our advanced treatments, nurturing staff, and kid-friendly spaces create a haven
+                where children feel safe, loved, and on the path to joyful recovery. </p>
+            </div>
+          </div>
+          <div class="media-style1">
+            <div class="media-icon"><i class="fas fa-phone"></i></div>
+            <div class="media-body">
+              <h3 class="media-title">CALL ANYTIME 24/7</h3>
+              <p class="media-text"><a href="tel:9799443095">+91 97 9944 3095</a></p>
+            </div>
+          </div>
+          <a href="/patientsignup" class="vs-btn">Book an Appointment Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="vs-skill-wrapper  ">
+  <div class="container">
+    <div class="skill-wrap1 bg-white">
+      <div class="row justify-content-center justify-content-lg-between">
+        <div class="col-md-6 col-lg-auto  mb-30">
+          <div class="d-xl-flex text-center text-xl-start skill-box">
+            <span class="ripple-icon hover-style2  align-self-start mb-20 mb-xl-0 mr-20"><i
+                class="flaticon-discuss"></i></span>
+            <div class="media-body">
+              <h2 class="mt-n2 mb-0 text-theme">10+</h2>
+              <p class="text-title fs-md fw-medium mt-1 mt-xl-0 mb-2 mb-xl-2">Years Of Experience</p>
+              <p class="fs-xs mb-0">Handle a wide range of pediatric cases with expertise & confidence </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-auto  mb-30">
+          <div class="d-xl-flex text-center text-xl-start skill-box">
+            <span class="ripple-icon  hover-style2 align-self-start mb-20 mb-xl-0 mr-20"><i
+                class="flaticon-medical-equipment"></i></span>
+            <div class="media-body">
+              <h2 class="mt-n2 mb-0 text-theme">15+</h2>
+              <p class="text-title fs-md fw-medium mt-1 mt-xl-0 mb-2 mb-xl-2">Experienced Doctor's</p>
+              <p class="fs-xs mb-0">Our young patients' ample medical care with collective knowledge & skills </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-auto  mb-30">
+          <div class="d-xl-flex text-center text-xl-start skill-box">
+            <span class="ripple-icon  hover-style2 align-self-start mb-20 mb-xl-0 mr-20"><i
+                class="flaticon-healthcare"></i></span>
+            <div class="media-body">
+              <h2 class="mt-n2 mb-0 text-theme">200+</h2>
+              <p class="text-title fs-md fw-medium mt-1 mt-xl-0 mb-2 mb-xl-2">Happy Patients</p>
+              <p class="fs-xs mb-0">Pride to offer satisfactory medical treatments to the children & families. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="appointment-wrapper space-top space-md-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-7 mb-30">
+        <div class="about-content">
+          <span class="sec-subtitle text-theme h3 mb-2 mb-sm-0">Comprehensive Health</span>
+          <h2 class="h1 mb-3">Support at Your Service</h2>
+          <div class="row">
+            <div class="col-xl-10 mb-md-2 pb-md-1">
+              <p class="mb-md-4">As the leading children's hospital in Jaipur, we're dedicated to exceptional Child
+                Health & Pediatrics. Our skilled pediatricians, supported by qualified nurses and staff, ensure a
+                comforting experience. Patient well-being is our priority, and Neo Clinic's advanced facilities operate
+                24/7 to address any complications. </p>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <ul class="vs-list list-unstyled text-title">
+                <li>Comprehensive Care </li>
+                <li>Supportive Staff </li>
+                <li>Holistic Approach </li>
+                <li>Proven Success </li>
+                <li>Community Engagement</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-5">
+              <ul class="vs-list list-unstyled text-title">
+                <li>Family-Centered Care </li>
+                <li>Pediatric-Sized Services </li>
+                <li>Advanced Technology</li>
+                <li>Personalized Treatment Plan </li>
+                <li>Awards and Recognitions </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <ul class="offer-counter counter-list list-unstyled" data-offer-date="12/08/2024">
+            <li>
+              <div class="day count-number ">00</div>
+              <span class="count-name">Days</span>
+            </li>
+            <li>
+              <div class="hour count-number ">00</div>
+              <span class="count-name">Hours</span>
+            </li>
+            <li>
+              <div class="minute count-number ">00</div>
+              <span class="count-name">Minutes</span>
+            </li>
+            <li>
+              <div class="seconds count-number ">00</div>
+              <span class="count-name">Seconds</span>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+      <div class="col-xl-5 mb-30 pt-30 pt-xl-0">
+
+        <div class="bg-white wow fadeInUp text-center" data-wow-delay="0.3s">
+          <img src="static/img/about/baby.png" alt="baby" class="w-75">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="vs-team-wrapper space-top space-md-bottom" data-bg-src="static/img/bg/bg-2.jpg">
+  <div class="container">
+    <div class="row  text-center justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="section-title">
+          <span class="h3 text-theme sec-subtitle">Tailored, Compassionate, & Well-Designed </span>
+          <h2 class="h1">Our Pediatrician Experts </h2>
+          <p>Introducing the heart of our practice – our renowned pediatricians stand ready to lead a proactive
+            revolution in granular patient service. </p>
+        </div>
+      </div>
+    </div>
+    <div class="row vs-carousel wow fadeIn" data-wow-delay="0.3s" data-arrows="true" data-slide-show="3"
+      data-lg-slide-show="2">
+      <div class="col-xl-4 mb-30">
+        <div class="team-card">
+          <div class="team-head">
+            <img src="static/img/team/t-1-1.png" alt="Team Area" class="w-100">
+            <div class="team-card-links">
+              <a class="team-links-toggler" href="#"><i class="fas fa-share-alt"></i></a>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-basketball-ball"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="h4 mb-0"><a href="/doctordetail" class="text-reset">David Smith</a></h3>
+            <p class="fs-xs degi text-theme mb-2">Specialist</p>
+            <p class="fs-xs">Conceptualize user-centric web-readiness via economically sound e-services. Interactively
+              coordinate next-generation </p>
+            <div class="">
+              <p class="fs-xs team-info"><i class="fas fa-phone text-theme"></i><a class="text-reset"
+                  href="tel:+592201520156">+592 2015 20156</a></p>
+              <p class="fs-xs team-info"><i class="fas fa-envelope text-theme"></i><a class="text-reset"
+                  href="mailto:info.example@mail.com">info.example@mail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-30">
+        <div class="team-card">
+          <div class="team-head">
+            <img src="static/img/team/t-1-2.png" alt="Team Area" class="w-100">
+            <div class="team-card-links">
+              <a class="team-links-toggler" href="#"><i class="fas fa-share-alt"></i></a>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-basketball-ball"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="h4 mb-0"><a href="/doctordetail" class="text-reset">Vivi Marian</a></h3>
+            <p class="fs-xs degi text-theme mb-2">Osteopathic</p>
+            <p class="fs-xs">Conceptualize user-centric web-readiness via economically sound e-services. Interactively
+              coordinate next-generation </p>
+            <div class="">
+              <p class="fs-xs team-info"><i class="fas fa-phone text-theme"></i><a class="text-reset"
+                  href="tel:+592201520156">+592 2015 20156</a></p>
+              <p class="fs-xs team-info"><i class="fas fa-envelope text-theme"></i><a class="text-reset"
+                  href="mailto:info.example@mail.com">info.example@mail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-30">
+        <div class="team-card">
+          <div class="team-head">
+            <img src="static/img/team/t-1-3.png" alt="Team Area" class="w-100">
+            <div class="team-card-links">
+              <a class="team-links-toggler" href="#"><i class="fas fa-share-alt"></i></a>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-basketball-ball"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="h4 mb-0"><a href="/doctordetail" class="text-reset">Farhan Moris</a></h3>
+            <p class="fs-xs degi text-theme mb-2">Pediatrician</p>
+            <p class="fs-xs">Conceptualize user-centric web-readiness via economically sound e-services. Interactively
+              coordinate next-generation </p>
+            <div class="">
+              <p class="fs-xs team-info"><i class="fas fa-phone text-theme"></i><a class="text-reset"
+                  href="tel:+592201520156">+592 2015 20156</a></p>
+              <p class="fs-xs team-info"><i class="fas fa-envelope text-theme"></i><a class="text-reset"
+                  href="mailto:info.example@mail.com">info.example@mail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-30">
+        <div class="team-card">
+          <div class="team-head">
+            <img src="static/img/team/t-1-4.png" alt="Team Area" class="w-100">
+            <div class="team-card-links">
+              <a class="team-links-toggler" href="#"><i class="fas fa-share-alt"></i></a>
+              <div class="team-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-basketball-ball"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="h4 mb-0"><a href="/doctordetail" class="text-reset">Jerzzy Lamot</a></h3>
+            <p class="fs-xs degi text-theme mb-2">Surgeon</p>
+            <p class="fs-xs">Conceptualize user-centric web-readiness via economically sound e-services. Interactively
+              coordinate next-generation </p>
+            <div class="">
+              <p class="fs-xs team-info"><i class="fas fa-phone text-theme"></i><a class="text-reset"
+                  href="tel:+592201520156">+592 2015 20156</a></p>
+              <p class="fs-xs team-info"><i class="fas fa-envelope text-theme"></i><a class="text-reset"
+                  href="mailto:info.example@mail.com">info.example@mail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div data-bg-src="static/img/bg/bg-shape-6.jpg">
+  <section class="vs-middle-box-wrapper space-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-xl-6 mb-30 mb-lg-0">
+          <div class="vs-middle-box d-md-flex text-center text-md-start bg-theme">
+            <div class="media-icon mb-20 mb-md-0 mr-20">
+              <img src="static/img/icons/icon-1-1.png" alt="Icon">
+            </div>
+            <div class="media-body align-self-center">
+              <span class="text-white fs-xs">Health Services</span>
+              <h4 class="text-white mb-0">Known the truth for Peace of Mind</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-6">
+          <div class="vs-middle-box d-md-flex text-center text-md-start bg-title">
+            <div class="media-icon mb-20 mb-md-0 mr-20">
+              <img src="static/img/icon/icon-1-1-001.png" alt="Icon">
+            </div>
+            <div class="media-body align-self-center">
+              <span class="text-theme fs-xs">Professinal Consult</span>
+              <h4 class="text-title mb-0 text-white">Medicine Suggestion for diseases</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==============================
+    Testimonial Area
+    ==============================-->
+  <section class="testimonial-wrapper space-bottom">
+    <div class="container">
+      <div class="row  text-center justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="section-title">
+            <span class="h3 text-theme sec-subtitle">Heartwarming Journeys </span>
+            <h2 class="h1">What Our Patients Say </h2>
+            <p>Testimonials from parents who've experienced the difference our dedicated team of doctors and staff
+              brings to every child's healthcare journey. </p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.3s" data-slide-show="2">
+            <div class="col-xl-6">
+              <div class="testimonial-box mb-30 bg-white">
+                <div class="content">
+                  <p class="fs-md">Words cannot express our gratitude to the incredible team at the kid's hospital. When
+                    our little one faced a daunting health challenge, their expertise, kindness, and unwavering support
+                    made all the difference. They truly are our heroes! </p>
+                </div>
+                <div class="author-img">
+                  <div class="avater-line"></div>
+                  <div class="avater">
+                    <img src="static/img/author/author-2-1.jpg" alt="Author Image">
+                  </div>
+                </div>
+                <div class="author-info">
+                  <div class="info">
+                    <h3 class="fs-20 name">Moris Jonson</h3>
+                    <span class="fs-xs degi text-theme">CEO, Hosak Int. Ltd.</span>
+                  </div>
+                  <div class="testi-rating">
+                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
+                        <strong class="rating">5.00</strong> out of
+                        5</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="testimonial-box mb-30 bg-white">
+                <div class="content">
+                  <p class="fs-md">The empathy and understanding shown by the pediatricians here are unparalleled. They
+                    not only listened to our concerns as parents but also took the time to connect with our child on a
+                    personal level for a less intimidating medical experience. </p>
+                </div>
+                <div class="author-img">
+                  <div class="avater-line"></div>
+                  <div class="avater">
+                    <img src="static/img/author/author-2-2.jpg" alt="Author Image">
+                  </div>
+                </div>
+                <div class="author-info">
+                  <div class="info">
+                    <h3 class="fs-20 name">Peter Parker</h3>
+                    <span class="fs-xs degi text-theme">HR, Tech Master Ltd.</span>
+                  </div>
+                  <div class="testi-rating">
+                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
+                        <strong class="rating">5.00</strong> out of
+                        5</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="testimonial-box mb-30 bg-white">
+                <div class="content">
+                  <p class="fs-md">Every visit to the kid's hospital was filled with positivity and genuine care. The
+                    cheerful environment and skillful treatment turned our son's recovery journey into a series of
+                    milestones filled with smiles. Thank you for being a ray of light! </p>
+                </div>
+                <div class="author-img">
+                  <div class="avater-line"></div>
+                  <div class="avater">
+                    <img src="static/img/author/author-2-3.jpg" alt="Author Image">
+                  </div>
+                </div>
+                <div class="author-info">
+                  <div class="info">
+                    <h3 class="fs-20 name">David Smith</h3>
+                    <span class="fs-xs degi text-theme">Founder, Ajaira LTD.</span>
+                  </div>
+                  <div class="testi-rating">
+                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
+                        <strong class="rating">5.00</strong> out of
+                        5</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="testimonial-box mb-30 bg-white">
+                <div class="content">
+                  <p class="fs-md">Facing surgeries for our child was a daunting prospect, but the kid's hospital team
+                    held our hands every step of the way. Their transparent communication, expert guidance, and genuine
+                    care they showed helped us turn fear into courage. </p>
+                </div>
+                <div class="author-img">
+                  <div class="avater-line"></div>
+                  <div class="avater">
+                    <img src="static/img/author/author-2-3.jpg" alt="Author Image">
+                  </div>
+                </div>
+                <div class="author-info">
+                  <div class="info">
+                    <h3 class="fs-20 name">David Smith</h3>
+                    <span class="fs-xs degi text-theme">Founder, Ajaira LTD.</span>
+                  </div>
+                  <div class="testi-rating">
+                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
+                        <strong class="rating">5.00</strong> out of
+                        5</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="vs-blog-wrapper space-top space-md-bottom">
+  <div class="container">
+    <div class="row  text-center justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6 wow fadeIn" data-wow-delay="0.3s">
+        <div class="section-title">
+          <span class="h3 text-theme sec-subtitle">Blog Posts</span>
+          <h2 class="h1 ">Latest News</h2>
+          <p>Proactively revolutionize granular customer service after pandemic internal or "organic"
+            sources proactive human capital rather.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.3s" data-slide-show="3" data-lg-slide-show="2">
+      <div class="col-xl-4">
+        <div class="vs-blog blog-card">
+          <div class="blog-img">
+            <img src="static/img/blog/b-1-1.jpg" alt="Blog Image" class="w-100">
+            <div class="blog-date">
+              <div class="day">22</div>
+              Jan 2023
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <a href="/singleblog"><i class="far fa-folder"></i>Mental Health</a>
+              <a href="/singleblog"><i class="fal fa-user"></i>David Smith</a>
+            </div>
+            <h3 class="blog-title h5 font-body lh-base"><a href="/singleblog">Services enable process is
+                tobe after user-centric schemas now</a></h3>
+            <a href="/singleblog" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="vs-blog blog-card">
+          <div class="blog-img">
+            <img src="static/img/blog/b-1-2.jpg" alt="Blog Image" class="w-100">
+            <div class="blog-date">
+              <div class="day">23</div>
+              Mar 2023
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <a href="/singleblog"><i class="far fa-folder"></i>Therapy</a>
+              <a href="/singleblog"><i class="fal fa-user"></i>Vivi Marian</a>
+            </div>
+            <h3 class="blog-title h5 font-body lh-base"><a href="/singleblog">From its medieval origins to
+                the digital era everything there</a></h3>
+            <a href="/singleblog" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="vs-blog blog-card">
+          <div class="blog-img">
+            <img src="static/img/blog/b-1-3.jpg" alt="Blog Image" class="w-100">
+            <div class="blog-date">
+              <div class="day">28</div>
+              Dec 2023
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <a href="/singleblog"><i class="far fa-folder"></i>Acupressure </a>
+              <a href="/singleblog"><i class="fal fa-user"></i>Moris John</a>
+            </div>
+            <h3 class="blog-title h5 font-body lh-base"><a href="/singleblog">Latin derived from Cicero's
+                1st-century BC text De Fini now with</a></h3>
+            <a href="/singleblog" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="vs-blog blog-card">
+          <div class="blog-img">
+            <img src="static/img/blog/b-1-4.jpg" alt="Blog Image" class="w-100">
+            <div class="blog-date">
+              <div class="day">22</div>
+              Jan 2023
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <a href="/singleblog"><i class="far fa-folder"></i>Mental Health</a>
+              <a href="/singleblog"><i class="fal fa-user"></i>David Smith</a>
+            </div>
+            <h3 class="blog-title h5 font-body lh-base"><a href="/singleblog">Creation timelines the
+                standard lorem ipsum passage vary</a></h3>
+            <a href="/singleblog" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

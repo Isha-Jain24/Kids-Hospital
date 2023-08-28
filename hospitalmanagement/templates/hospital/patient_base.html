@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LazyCoder || Nikesh</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="{% static '/style.css' %}">
+  <link rel="stylesheet" href="{% static '/admin.css' %}">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="menu" tabindex="0">
+    <div class="smartphone-menu-trigger"></div>
+    <header class="avatar">
+      <img src="{% static patient.profile_pic.url %}" alt="Profile Pic" />
+      <br><br>
+      <h6 style="color: #fff;">Patient</h6>
+      <h2 style="color: #fff;"> {{ request.user.first_name }}</h2>
+    </header>
+    <ul>
+      <li tabindex="0" class="icon-dashboard"> <a style="color:white; text-decoration:none;"
+          href="/patient-dashboard"><span><i class="fa fa-dashboard" style="font-size: 18px;"></i>Dashboard</span></a>
+      </li>
+      <li tabindex="0" class="icon-calendar"> <a style="color:white; text-decoration:none;"
+          href="/patient-appointment"><span> <i style="font-size: 18px;" class="fa fa-calendar">
+            </i>Appointments</span></a></li>
+      <li tabindex="0" class="icon-users"> <a style="color:white; text-decoration:none;"
+          href="/patient-view-doctor"><span><i style="font-size: 18px;" class="fa fa-user-md"></i>Doctors</span></a>
+      </li>
+
+      <li tabindex="0" class="icon-users"> <a style="color:white; text-decoration:none;"
+          href="/patient-discharge"><span><i style="font-size: 18px;" class="fa fa-sign-out"></i>Discharge</span></a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <!-- nav start -->
+    <div class="bs-example">
+      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#27477d; border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;margin-top:10px;">
+        <a href="/patient-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav" style=" margin-left: 90%;">
+
+            <a href="/logout" class="nav-item nav-link">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- nav end -->
+    <br><br>
+    <!-- content start-->
+    {% block content %}
+    {% endblock content %}
+    <!-- content end-->
+
+  </main>
+
+
+</body>
+
+</html>

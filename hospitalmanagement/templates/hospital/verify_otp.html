@@ -1,0 +1,82 @@
+{% load widget_tweaks %}
+{% include "hospital/navbar.html" %}
+
+
+<div class="breadcumb-wrapper ">
+    <div class="parallax" data-parallax-image="static/img/breadcurmb/bg-all.jpg"></div>
+    <div class="container z-index-common">
+        <div class="breadcumb-content">
+            <div class="breadcumb-menu-wrap">
+                <i class="far fa-home-lg"></i>
+                <ul class="breadcumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">verify-otp</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="signup-area ptb-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 pl-0">
+                <div class="signup-left">
+                    <img src="../images/signup-bg.jpg" alt="SignUp" />
+                </div>
+            </div>
+            <div class="col-lg-6 ptb-100">
+                <div class="signup-item">
+                    <div class="signup-form">
+                        <form method="post" action="verify-otp">
+                            {% csrf_token %}
+                            <div class="container register-form">
+                                <div class="form">
+                                    <div class="note">
+                                        <h2>Verify OTP</h2>
+                                    </div>
+                                    <div class="form-content">
+                                        <div class="row">
+                                            {% comment %} <div class="col-md-6"> {% endcomment %}
+                                                <div class="form-group">
+                                                    {% comment %}
+                                                    {% render_field form.otp class="form-control" placeholder="Enter OTP" %}
+                                                    {% endcomment %}
+                                                    <input type="text" name="otp" class="form-control"
+                                                        placeholder="Enter OTP" value="{{ form.otp.value }}">
+                                                    {% if error %}
+                                                    <small class="text-danger">{{ error }}</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="vs-btn style2">Verify OTP<i
+                                                    class="fas fa-chevron-right"></i></button>
+                                            {% comment %} <div class="text-center">Do not have account? <a
+                                                    href="adminsignup">Signup
+                                                    here</a></div> {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include "hospital/footer.html" %}

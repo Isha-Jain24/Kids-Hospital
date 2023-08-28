@@ -1,0 +1,110 @@
+{% load widget_tweaks %}
+{% include "hospital/navbar.html" %}
+
+
+
+<div class="breadcumb-wrapper ">
+  <div class="parallax" data-parallax-image="static/img/breadcurmb/bg-all.jpg"></div>
+  <div class="container z-index-common">
+    <div class="breadcumb-content">
+      <div class="breadcumb-menu-wrap">
+        <i class="far fa-home-lg"></i>
+        <ul class="breadcumb-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">Adminlogin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="signup-area ptb-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 pl-0">
+        <div class="signup-left">
+          <img src="../images/signup-bg.jpg" alt="SignUp" />
+        </div>
+      </div>
+      <div class="col-lg-6 ptb-100">
+        <div class="signup-item">
+          <div class="signup-head">
+            <h2>Login Here</h2>
+            <p>
+              Do not have account?
+              <a href="adminsignup">Signup here</a>
+            </p>
+          </div>
+          <div class="signup-form">
+            <form method="post" action="admin-send-otp">
+              {% csrf_token %}
+              <div class="register-form">
+                <div class="form">
+                  <div class="note">
+                    <p>Admin Login Page</p>
+                  </div>
+                  <div class="form-content">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          {% comment %} {% render_field form.email class="form-control" placeholder="Email" %}
+                          {% endcomment %}
+                          <input type="email" name="email" class="form-control" placeholder="Email"
+                            value="{{ form.email.value }}">
+                          {% if error %}
+                          <small class="text-danger">{{ error }}</small>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="vs-btn style2">Send OTP<i class="fas fa-chevron-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <p>Admin Login Page</p>
+      </div>
+
+      <div class="form-content">
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="form-group">
+              {% render_field form.username class="form-control" placeholder="Username" %}
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="form-group">
+              {% render_field form.password class="form-control" placeholder="Password" %}
+            </div>
+
+          </div>
+        </div>
+        <button type="submit" class="vs-btn style2">Login</button>
+        <div class="text-center">Do not have account? <a href="adminsignup">Signup here</a></div>
+      </div>
+    </div>
+  </div>
+
+</form> -->
+{% include "hospital/footer.html" %}
