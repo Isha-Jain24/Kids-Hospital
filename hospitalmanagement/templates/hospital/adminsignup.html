@@ -58,20 +58,39 @@
 
                         <div class="form-group">
 
-                          {% render_field form.first_name class="form-control" pattern="[A-Za-z]+" placeholder="First Name" %}
+                          {% render_field form.first_name class="form-control" placeholder="First Name" %}
+                          {% if form.first_name.errors %}
+                            <div class="error-message">
+                                {% for error in form.first_name.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                          {% endif %}
 
                         </div>
 
                         <div class="form-group">
 
                           {% render_field form.username class="form-control" placeholder="Username" %}
-
+                          {% if form.username.errors %}
+                            <div class="error-message">
+                                {% for error in form.username.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                          {% endif %}
                         </div>
 
                         <div class="form-group">
 
                           {% render_field form.email class="form-control" placeholder="Email" %}
-
+                          {% if form.email.errors %}
+                            <div class="error-message">
+                                {% for error in form.email.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                          {% endif %}
                         </div>
 
 
@@ -82,7 +101,14 @@
 
                         <div class="form-group">
 
-                          {% render_field form.last_name class="form-control" pattern="[A-Za-z]+" placeholder="Last Name" %}
+                          {% render_field form.last_name class="form-control" placeholder="Last Name" %}
+                          {% if form.last_name.errors %}
+                            <div class="error-message">
+                                {% for error in form.last_name.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                          {% endif %}
 
                         </div>
 
@@ -91,6 +117,13 @@
                         <div class="form-group">
 
                           {% render_field form.password class="form-control" placeholder="Password" %}
+                          {% if form.password.errors %}
+                            <div class="error-message">
+                                {% for error in form.password.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                          {% endif %}
 
                         </div>
 

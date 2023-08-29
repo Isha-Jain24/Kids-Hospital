@@ -12960,4 +12960,5 @@ blockquote cite:before {
 .error-message {
   color: red;
   padding-left: 15px; 
+  font-size:14px;
 }

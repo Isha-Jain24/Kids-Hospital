@@ -40,6 +40,10 @@
     .menu {
       top: 50px;
     }
+    .error-message {
+      color: red;
+      padding-left: 15px; 
+    }
   </style>
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -48,7 +52,7 @@
 </head>
 <br><br>
 <!------ update page for doctor ---------->
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="{% url 'update-doctor' pk=doctor.id %}"  enctype="multipart/form-data">
   {% csrf_token %}
   <div class="container register-form">
     <div class="form">
@@ -59,16 +63,37 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              {% render_field userForm.first_name class="form-control" pattern="[A-Za-z]+" placeholder="First Name" %}
+              {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+              {% comment %} {% if userForm.first_name.errors %}
+                <div class="error-message">
+                    {% for error in userForm.first_name.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+              {% endif %}  {% endcomment %}
             </div>
             <div class="form-group">
               {% render_field userForm.username class="form-control" placeholder="Username" %}
+              {% comment %} {% if userForm.username.errors %}
+                  <div class="error-message">
+                      {% for error in userForm.username.errors %}
+                          {{ error }}
+                      {% endfor %}
+                  </div>
+                {% endif %}  {% endcomment %}
             </div>
             <div class="form-group">
               {% render_field userForm.email class="form-control" placeholder="Email" %}
             </div>
             <div class="form-group">
-              {% render_field doctorForm.mobile class="form-control"  pattern="[6789][0-9]{9}" placeholder="Mobile" %}
+              {% render_field doctorForm.mobile class="form-control" placeholder="Mobile" %}
+              {% comment %} {% if doctorForm.mobile.errors %}
+              <div class="error-message">
+                  {% for error in doctorForm.mobile.errors %}
+                      {{ error }}
+                  {% endfor %}
+              </div>
+              {% endif %} {% endcomment %}
             </div>
             <div class="form-group">
               {% render_field doctorForm.department class="form-control" placeholder="Department" %}
@@ -76,10 +101,24 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              {% render_field userForm.last_name class="form-control" pattern="[A-Za-z]+" placeholder="Last Name" %}
+              {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+              {% comment %} {% if userForm.last_name.errors %}
+                <div class="error-message">
+                    {% for error in userForm.last_name.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+              {% endif %} {% endcomment %}
             </div>
             <div class="form-group">
               {% render_field userForm.password class="form-control" placeholder="Password" %}
+              {% comment %} {% if userForm.password.errors %}
+                  <div class="error-message">
+                      {% for error in userForm.password.errors %}
+                          {{ error }}
+                      {% endfor %}
+                  </div>
+              {% endif %} {% endcomment %}
             </div>
             <div class="form-group">
               {% render_field doctorForm.address class="form-control" placeholder="Address" %}
@@ -94,5 +133,6 @@
     </div>
   </div>
 </form>
+{% comment %} <p>Form action URL: {% url 'update-doctor' pk=doctor.id %}</p> {% endcomment %}
 
 {% endblock content %}

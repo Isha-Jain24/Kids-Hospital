@@ -46,6 +46,7 @@ def patientclick_view(request):
 
 def admin_signup_view(request):
     form = forms.AdminSigupForm()
+    mydict = {"form": form}
     if request.method == "POST":
         form = forms.AdminSigupForm(request.POST)
         if form.is_valid():
@@ -57,7 +58,8 @@ def admin_signup_view(request):
             my_admin_group = Group.objects.get_or_create(name="ADMIN")
             my_admin_group[0].user_set.add(user)
             return HttpResponseRedirect("adminlogin")
-    return render(request, "hospital/adminsignup.html", {"form": form})
+        mydict["form"] = form
+    return render(request, "hospital/adminsignup.html",context=mydict)
 
 
 def doctor_signup_view(request):
@@ -423,19 +425,24 @@ def update_doctor_view(request, pk):
     user = models.User.objects.get(id=doctor.user_id)
 
     userForm = forms.DoctorUserForm(instance=user)
-    doctorForm = forms.DoctorForm(request.FILES, instance=doctor)
-    mydict = {"userForm": userForm, "doctorForm": doctorForm}
+    doctorForm = forms.DoctorForm(instance=doctor)
+    mydict = {"userForm": userForm, "doctorForm": doctorForm ,"doctor": doctor}
     if request.method == "POST":
+        # import pdb;pdb.set_trace()
         userForm = forms.DoctorUserForm(request.POST, instance=user)
+        # print(userForm.data)
         doctorForm = forms.DoctorForm(request.POST, request.FILES, instance=doctor)
+        # print(doctorForm.data)
         if userForm.is_valid() and doctorForm.is_valid():
-            user = userForm.save()
-            user.set_password(user.password)
+            user = userForm.save(commit=False)
+            user.set_password(userForm.cleaned_data['password'])
             user.save()
             doctor = doctorForm.save(commit=False)
             doctor.status = True
             doctor.save()
             return redirect("admin-view-doctor")
+        # else:
+        #     return render(request, "hospital/admin_update_doctor.html", context=mydict)
     return render(request, "hospital/admin_update_doctor.html", context=mydict)
 
 
@@ -547,6 +554,8 @@ def update_patient_view(request, pk):
             patient.assignedDoctorId = request.POST.get("assignedDoctorId")
             patient.save()
             return redirect("admin-view-patient")
+        mydict["userForm"]=userForm
+        mydict["patientForm"]=patientForm
     return render(request, "hospital/admin_update_patient.html", context=mydict)
 
 
